@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+:root {
+    --primary-color: #430062;
+    --secondary-color: #fff;
+    --btn-color: lightblue;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  font-family: "Quicksand";
+}
+
+.root-container {
+    height: 85lvh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:var(--secondary-color);
+}
+.quiz-container {
+    width: 90%;
+    height: auto;
+    background: var(--primary-color);
+    border-radius: 10px;
+    padding: 4px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+}
+.single-choice input, 
+.single-choice label{
+    list-style-type: radio;
+    border: 1px solid var(--btn-color);
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    transition: all .3s ease-in-out;
+}
+.single-choice input:hover {
+     cursor: pointer;
+     background: #FCE4FC;
+     color: var(--primary-color);
+     transform: scale(1.3);
+}
+p{
+    margin: 1rem;
+}
+.result-container {
+    width: 60%;
+    height: auto;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.restart-btn {
+    border: 1px solid var(--btn-color);
+    padding: 1rem 1rem;
+    text-align: center;
+    background-color: gray;
+    color:var(--secondary-color);
+    border-radius: 2rem;
+    border-style: none;
+    font-weight: bold;
+    transition: all .3s ease-in-out;
+}
+.restart-btn:hover,
+.next-btn:hover {
+    cursor: pointer;
+    background: #FCE4FC;
+    color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.single-choice {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: .5rem;
+    width: 90%;
+    margin-left: 2rem;
+}
+.single-choice input, 
+.single-choice label{
+    margin-top: 1rem;
+}
+.next-btn {
+    border: 1px solid var(--btn-color);
+    padding: .6rem 1rem;
+    text-align: center;
+    background-color: var(--primary-color);
+    color:var(--secondary-color);
+    border-radius: 1rem;
+    border-style: none;
+    font-weight: bold;
+    transition: all .3s ease-in-out;
+    margin-top: 1rem;
+}
+/* ============== pagination ============ */
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.pagination button {
+    width: 40px;
+    height: 40px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: transparent;
+    color: #430062;
+    border: 1px solid gray;
+    border-style: square;
+}
+
+.pagination button.active {
+    font-weight: 900;
+    border-color: #101010;
+    background: #430062;
+    color: #fff;
+}
